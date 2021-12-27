@@ -14,6 +14,6 @@ export const productsAPI = {
         return axios.get<Array<Product>>(`/products?category=${category}`).then(res => res.data)
     },
     getPopularItems() {
-        return axios.get<Array<Product>>(`/products?limit=5`).then(res => res.data)
+        return axios.get<Array<Product>>(`/products?_limit=5`).then(res => res.data)
     }
 }

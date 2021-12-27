@@ -39,3 +39,11 @@
     color: #323232;
 
 }
+
+.description {
+    margin-top: 8px;
+    font-weight: bold;
+    font-size: 12px;
+    color: #9C9C9C;
+    margin-bottom: 16px;
+}

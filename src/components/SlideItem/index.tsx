@@ -7,9 +7,10 @@ type SlideType = {
     img: string
     title: string
     price: number
+    description: string
 }
 
-const Slide: React.FC<SlideType> = ({id, img, price, title}) => {
+const Slide: React.FC<SlideType> = ({id, img, price, title, description}) => {
     return (
         <Link to={`/product/${id}`}>
             <div className={styles.slide}>
@@ -20,6 +21,7 @@ const Slide: React.FC<SlideType> = ({id, img, price, title}) => {
                     <h2 className={styles.title}>{title}</h2>
                     <h3 className={styles.price}>{price}р.</h3>
                 </div>
+                <p className={styles.description}>{description}</p>
             </div>
         </Link>
 

@@ -21,8 +21,8 @@
 .mainHeader {
     padding: 30px;
     overflow: hidden;
-    min-height: 360px;
-    background: linear-gradient(134.51deg, rgba(247, 195, 85, 0.5) -24.91%, #F7C355 49.71%, rgba(247, 195, 85, 0) 136.21%);
+    min-height: 500px;
+    background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%), linear-gradient(134.51deg, #F7C355 49.71%, rgba(247, 195, 85, 0) 136.21%);
 }
 
 .mainNavigation {

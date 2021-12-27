@@ -15,8 +15,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchPopularProductItems, setActivePopularItem} from "../../redux/slices/popularProductsSlice";
 import {RootState} from "../../redux/store";
 import {LoadingState} from "../../redux/Types";
-import Slide from "../../components/SlideItem/inex";
+import Slide from "../../components/SlideItem";
 import NextImg from "../../assets/img/arrow.png"
+import MainLoader from '../../components/loaders/MainLoader';
 
 const Main: React.FC = () => {
     const [menuVisible, setMenuVisible] = React.useState(false)
@@ -112,20 +113,35 @@ const Main: React.FC = () => {
                         <button className={styles.prev} onClick={() => onClickToggleActivePopularItem(-1)}><img
                             src={NextImg} alt="prev"/></button>
                         <Slide id={activeSliderItem.id} title={activeSliderItem.title}
+                               description={activeSliderItem.description}
                                img={activeSliderItem.picture}
                                price={activeSliderItem.sizes[0].price}/>
                         <button className={styles.next} onClick={() => onClickToggleActivePopularItem(1)}><img
                             src={NextImg} alt="next"/></button>
                     </div>
                 )}
+                {popularItemsLoadingState === LoadingState.Loading && isDesktop && (
+                    <div className={styles.slider}>
+                        <MainLoader/>
+                    </div>
+                )}
                 {popularItemsLoadingState === LoadingState.Loaded && isMobile && (
                     <div className={styles.popularItems}>
                         {popularItems.map((item, index) => <Slide key={item.title + index} id={item.id}
                                                                   title={item.title}
+                                                                  description={activeSliderItem.description}
                                                                   img={item.picture}
                                                                   price={activeSliderItem.sizes[0].price}/>)}
                     </div>
                 )}
+                {popularItemsLoadingState === LoadingState.Loading && isMobile && (
+                    Array(5).fill(0).map(_ => (
+                        <div className={styles.popularItems}>
+                            <MainLoader/>
+                        </div>
+                    ))
+                )}
+
 
                 {isDesktop && (
                     <div>

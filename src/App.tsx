@@ -46,9 +46,8 @@ function App() {
                 <Route path={"auth/login"} element={<Login/>}/>
                 <Route path={"auth/register"} element={<Register/>}/>
                 <Route path={"support"} element={<Support/>}/>
-                <Route path={"/"} element={<Main/>}/>
-
                 <Route path={"*"} element={<NotFoundPage/>}/>
+                <Route path={"/"} element={<Main/>}/>
             </Routes>
         </div>
     );
