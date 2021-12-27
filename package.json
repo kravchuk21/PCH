@@ -20,6 +20,7 @@
     "emailjs": "^3.7.0",
     "emailjs-com": "^3.2.0",
     "final-form": "^4.20.4",
+    "http-proxy-middleware": "^2.0.1",
     "json-server": "^0.17.0",
     "jwt-decode": "^3.1.2",
     "macro-css": "^1.0.5",
@@ -52,7 +53,6 @@
       "react-app/jest"
     ]
   },
-  "proxy": "http://localhost:3001",
   "browserslist": {
     "production": [
       ">0.2%",
