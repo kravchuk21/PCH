@@ -1,0 +1,39 @@
+.mainMenu {
+    padding: 10px 30px;
+    background: #323232;
+}
+
+.mainMenu.whiteMode {
+    background: #FFFFFF;
+}
+
+.content {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuList {
+    display: flex;
+}
+
+.menuItem {
+    margin-right: 20px;
+}
+
+.mainMenu.whiteMode .menuItem a{
+    color: #323232;
+}
+
+.menuItem a {
+    font-weight: 800;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+
+.menuButton {
+}

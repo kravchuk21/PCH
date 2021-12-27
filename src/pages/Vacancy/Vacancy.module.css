@@ -1,0 +1,142 @@
+.vacancy {
+
+}
+
+.vacancyHeader {
+    position: relative;
+    background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(251, 157, 40, 0.5));
+    min-height: 360px;
+    box-shadow: 0 5px 10px rgba(251, 157, 40, 0.5);
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.vacancyImage {
+    position: relative;
+    overflow: hidden;
+}
+
+.vacancyHeader img {
+    z-index: 7;
+    display: block;
+    margin: 0 auto;
+}
+
+.vacancyHeaderButtons {
+    z-index: 9;
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.vacancyHeaderButtons a {
+    cursor: pointer;
+}
+
+.vacancyInfo {
+    padding: 0 30px;
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.vacancyTitle {
+    font-weight: 900;
+    font-size: 36px;
+    margin-bottom: 24px;
+}
+
+.vacancyName {
+    font-weight: 900;
+    font-size: 18px;
+    margin: 0;
+}
+
+.vacancyPrice {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+.selectSize {
+    display: flex;
+    margin-top: 15px;
+    margin-bottom: 24px;
+}
+
+.sizeButton {
+    width: 55px;
+    height: 55px;
+    background: #E9EDF6;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    font-size: 30px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.sizeButton.active {
+    background: #FBB347;
+    color: #FFFFFF;
+}
+
+.description {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 18px;
+}
+
+.text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9C9C9C;
+    margin-bottom: 16px;
+}
+
+.descriptionTitle {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+
+.descriptionText {
+    font-weight: bold;
+    font-size: 12px;
+    color: #9C9C9C;
+    margin-bottom: 16px;
+}
+
+.list {
+    margin-bottom: 16px;
+}
+
+.listItem {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: #9C9C9C;
+    padding-left: 20px;
+    position: relative;
+    display: block;
+}
+
+.listItem::before {
+    position: absolute;
+    content: "";
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #FBB347;
+    left: 0;
+}

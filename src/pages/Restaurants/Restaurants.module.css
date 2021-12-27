@@ -1,0 +1,10 @@
+.restaurants {
+    max-width: 560px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px;
+}
+
+.restaurantsItems {
+    margin-top: 30px;
+}

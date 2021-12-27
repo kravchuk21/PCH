@@ -1,0 +1,50 @@
+.menu {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+}
+
+.category {
+    display: flex;
+    padding: 0 30px 15px 30px;
+    overflow-x: auto;
+}
+
+.categoryItem {
+    border: 1px solid #323232;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-right: 8px;
+    cursor: pointer;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.categoryLoader {
+    margin-right: 10px;
+}
+
+.categoryItem:hover, .categoryItem.active {
+    background: #323232;
+    color: #FFFFFF;
+}
+
+.productCards {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+.productLoader {
+    margin-bottom: 24px;
+}

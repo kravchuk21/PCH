@@ -1,0 +1,65 @@
+.select {
+    /*width: 255px;*/
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.selectPopup {
+    position: absolute;
+    left: 0;
+    top: -35px;
+    margin-top: 15px;
+    background: #EBECF0;
+    overflow: hidden;
+    padding: 10px 0;
+    width: 220px;
+    max-height: 180px;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-sizing: border-box;
+    box-shadow: -10px -10px 20px rgba(250, 251, 255, 0.4), 10px 10px 30px rgba(166, 171, 189, 0.6);
+    border-radius: 20px;
+}
+
+.selectPopup ul {
+    overflow: hidden;
+}
+
+.selectPopup li {
+    font-weight: bold;
+    font-size: 16px;
+    color: #868686;
+    padding: 12px 20px;
+    cursor: pointer;
+}
+
+.selectPopup li.active,
+.selectPopup li:hover {
+    color: #323232;
+}
+
+.selectPopup li.active {
+    background: #e0e0e3;
+}
+
+.selectLabel {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+.select b {
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    margin-right: 10px;
+}
+
+.selectLabel span {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #FBB347;
+    cursor: pointer;
+}

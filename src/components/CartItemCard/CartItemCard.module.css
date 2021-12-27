@@ -1,0 +1,77 @@
+.cartItem {
+    display: flex;
+    margin-bottom: 24px;
+
+}
+
+.productImage {
+    width: 170px;
+    height: 110px;
+    background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+    box-shadow: 0px 5px 10px rgba(251, 157, 40, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+}
+.productImage img{
+    z-index: 3;
+}
+
+.circles {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    z-index: 1;
+}
+
+.productInfo {
+    padding: 0 !important;
+    margin-left: 16px;
+}
+.productTitle {
+    font-weight: 900;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.productInfoText {
+    font-weight: bold;
+    font-size: 12px;
+    margin-bottom: 4px;
+}
+
+.productPrice {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.productCount {
+    display: flex;
+    margin: 8px 0;
+}
+.productCount button {
+    width: 20px;
+    height: 20px;
+    background: #FBB347;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.productCount span {
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0 8px;
+}

@@ -1,0 +1,612 @@
+{
+  "products": [
+    {
+      "id": 0,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Шаурма",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "select": [
+        {
+          "title": "Соус",
+          "item": [
+            {
+              "title": "Кисло - сладкий",
+              "price": 9
+            },
+            {
+              "title": "Чесночный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            },
+            {
+              "title": "Кетчуп",
+              "price": 5
+            },
+            {
+              "title": "Барбекю",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "radio": [
+        {
+          "title": "Лаваш",
+          "item": [
+            {
+              "title": "Пшеничный",
+              "price": 50
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 0
+    },
+    {
+      "id": 1,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Пончик",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "radio": [
+        {
+          "title": "поливка",
+          "item": [
+            {
+              "title": "Глазурь",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 2
+    },
+    {
+      "id": 2,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Шаурма",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "select": [
+        {
+          "title": "Соус",
+          "item": [
+            {
+              "title": "Кисло - сладкий",
+              "price": 9
+            },
+            {
+              "title": "Чесночный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            },
+            {
+              "title": "Кетчуп",
+              "price": 5
+            },
+            {
+              "title": "Барбекю",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "radio": [
+        {
+          "title": "Лаваш",
+          "item": [
+            {
+              "title": "Пшеничный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 0
+    },
+    {
+      "id": 3,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Пончик",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "radio": [
+        {
+          "title": "поливка",
+          "item": [
+            {
+              "title": "Глазурь",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 2
+    },
+    {
+      "id": 4,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Шаурма",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "select": [
+        {
+          "title": "Соус",
+          "item": [
+            {
+              "title": "Кисло - сладкий",
+              "price": 9
+            },
+            {
+              "title": "Чесночный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            },
+            {
+              "title": "Кетчуп",
+              "price": 5
+            },
+            {
+              "title": "Барбекю",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "radio": [
+        {
+          "title": "Лаваш",
+          "item": [
+            {
+              "title": "Пшеничный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 0
+    },
+    {
+      "id": 5,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Пончик",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "radio": [
+        {
+          "title": "поливка",
+          "item": [
+            {
+              "title": "Глазурь",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 2
+    },
+    {
+      "id": 6,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Шаурма",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "select": [
+        {
+          "title": "Соус",
+          "item": [
+            {
+              "title": "Кисло - сладкий",
+              "price": 9
+            },
+            {
+              "title": "Чесночный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            },
+            {
+              "title": "Кетчуп",
+              "price": 5
+            },
+            {
+              "title": "Барбекю",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "radio": [
+        {
+          "title": "Лаваш",
+          "item": [
+            {
+              "title": "Пшеничный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 0
+    },
+    {
+      "id": 7,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Пончик",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "radio": [
+        {
+          "title": "поливка",
+          "item": [
+            {
+              "title": "Глазурь",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 2
+    },
+    {
+      "id": 8,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Шаурма",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "select": [
+        {
+          "title": "Соус",
+          "item": [
+            {
+              "title": "Кисло - сладкий",
+              "price": 9
+            },
+            {
+              "title": "Чесночный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            },
+            {
+              "title": "Кетчуп",
+              "price": 5
+            },
+            {
+              "title": "Барбекю",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "radio": [
+        {
+          "title": "Лаваш",
+          "item": [
+            {
+              "title": "Пшеничный",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 0
+    },
+    {
+      "id": 9,
+      "picture": "https://i.ibb.co/YkksJqT/image-11.png",
+      "title": "Пончик",
+      "description": "Не шаварма а сказка, аж пальчыки \nаближыш усе гэта непауторны укус \nзабягалауки пчш, ешце гарбызы гразите",
+      "sizes": [
+        {
+          "title": "S",
+          "price": 9
+        }
+      ],
+      "addiction": [
+        {
+          "title": "S",
+          "price": 9
+        },
+        {
+          "title": "M",
+          "price": 12
+        },
+        {
+          "title": "L",
+          "price": 12
+        }
+      ],
+      "radio": [
+        {
+          "title": "поливка",
+          "item": [
+            {
+              "title": "Глазурь",
+              "price": 5
+            },
+            {
+              "title": "Сырный",
+              "price": 5
+            }
+          ]
+        }
+      ],
+      "category": 2
+    }
+  ],
+  "categories": [
+    {
+      "title": "Напитки",
+      "id": 1
+    },
+    {
+      "title": "Пончики",
+      "id": 2
+    },{
+      "title": "Напитки",
+      "id": 3
+    }
+  ]
+}
