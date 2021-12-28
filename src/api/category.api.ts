@@ -1,5 +1,5 @@
 import axios from "axios";
-import { Category } from "../redux/Types";
+import {Category} from "../redux/Types";
 
 export const categoryAPI = {
     getItems() {

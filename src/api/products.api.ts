@@ -3,9 +3,7 @@ import axios from "axios";
 
 export const productsAPI = {
     getItems() {
-        return axios.get<Array<Product>>(`/products`).then(res => {
-            return res.data
-        })
+        return axios.get<Array<Product>>(`/products`).then(res => res.data)
     },
     getItemById(id: string) {
         return axios.get<Product[]>(`/products?id=${id}`).then(res => res.data)

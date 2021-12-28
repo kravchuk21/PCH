@@ -4,6 +4,9 @@ import {Link} from "react-router-dom";
 import LogoImg from "../../assets/img/logo.png";
 import clsx from "classnames";
 import CartIcon from "../CartIcon";
+import {useDispatch, useSelector} from 'react-redux';
+import {RootState} from '../../redux/store';
+import {logout} from '../../redux/slices/userSlice';
 
 
 type NavigationType = {
@@ -11,6 +14,14 @@ type NavigationType = {
 }
 
 const Navigation: React.FC<NavigationType> = ({mode = "dark"}) => {
+    const isAuth = useSelector((state: RootState) => state.user.isAuth)
+    const dispatch = useDispatch()
+
+    const onClickLogout = () => {
+        dispatch(logout())
+    }
+
+
     return (
         <nav className={clsx(styles.mainMenu, {[styles.whiteMode]: mode === "white"})}>
             <div className={styles.content}>
@@ -39,12 +50,16 @@ const Navigation: React.FC<NavigationType> = ({mode = "dark"}) => {
                         </Link>
                     </div>
                     <div className={styles.menuItem}>
-                        <Link to={"/auth"}>
-                            Войти
-                        </Link>
+                        {
+                            isAuth ? (<div onClick={onClickLogout}>
+                                Выйти
+                            </div>) : (<Link to={"/auth"}>
+                                Войти
+                            </Link>)
+                        }
                     </div>
                 </div>
-                <CartIcon/>
+                <CartIcon mode={mode}/>
             </div>
         </nav>
     );

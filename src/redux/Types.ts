@@ -22,16 +22,15 @@ export interface ProductToCart {
     picture: string
     title: string
     price: number
-    select: SelectItem | null
-    radio: CheckItem | null
-    sizes: Sizes
+    select: string | null
+    radio: string | null
+    sizes: string
 }
 
 export interface ProductInCart extends ProductToCart {
     count: number,
     totalPrice: number
 }
-
 
 export type Check = {
     title: string

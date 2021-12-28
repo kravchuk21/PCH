@@ -17,7 +17,7 @@ const MenuItem: React.FC<MenuItemType> = ({id, title, picture}) => {
                 <Link className={styles.productButton} to={`/product/${id}`}>Больше</Link>
             </div>
             <img className={styles.productImg} src={picture} alt={title}/>
-            <img width={160} className={styles.circles} src={CirclesImg} alt="circles"/>
+            <img width={180} className={styles.circles} src={CirclesImg} alt="circles"/>
         </div>
     );
 };

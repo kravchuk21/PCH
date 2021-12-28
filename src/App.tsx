@@ -1,5 +1,7 @@
 import React from 'react';
 import {Route, Routes} from "react-router-dom";
+import {isMobile} from 'react-device-detect';
+//pages
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import About from "./pages/About";
@@ -11,19 +13,19 @@ import Main from "./pages/Main";
 import Register from './pages/Auth/forms/Register';
 import Login from './pages/Auth/forms/Login';
 import NotFoundPage from './pages/NotFoundPage';
-import {useDispatch, useSelector} from "react-redux";
-import {isMobile} from 'react-device-detect';
 import Support from "./pages/Support";
-import {RootState} from "./redux/store";
+//components
 import Loader from "./components/loaders/Loader";
+//redux
+import {useDispatch, useSelector} from "react-redux";
 import {initializeApp} from "./redux/slices/appSlice";
+import {RootState} from "./redux/store";
 
 function App() {
-    const initialized = useSelector((state: RootState) => state.app.initialized)
     const dispatch = useDispatch()
+    const initialized = useSelector((state: RootState) => state.app.initialized)
 
     React.useEffect(() => {
-
         dispatch(initializeApp())
     }, [dispatch])
 
@@ -34,8 +36,7 @@ function App() {
     return (
         <div className="App">
             <Routes>
-                <Route path={"product/:id"}
-                       element={<Product/>}/>
+                <Route path={"product/:id"} element={<Product/>}/>
                 <Route path={"cart"} element={<Cart/>}/>
                 {isMobile && <Route path={"about"} element={<About/>}/>}
                 {isMobile && <Route path={"restaurants"} element={<Restaurants/>}/>}

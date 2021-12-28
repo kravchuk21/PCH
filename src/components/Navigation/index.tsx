@@ -1,14 +1,26 @@
 import React from 'react';
-import styles from "./Navigation.module.css";
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from 'react-redux';
+import styles from "./Navigation.module.css";
+//redux
+import {logout} from '../../redux/slices/userSlice';
+import {RootState} from '../../redux/store';
 
 type NavigationType = {
     onClickOpenMenu: () => void
 }
 
-const Navigation:React.FC<NavigationType> = ({onClickOpenMenu}) => {
+const Navigation: React.FC<NavigationType> = ({onClickOpenMenu}) => {
+    const dispatch = useDispatch()
+    const isAuth = useSelector((state: RootState) => state.user.isAuth)
+    const selectRef = React.useRef<HTMLHeadingElement>(null);
+
+    const onClickLogout = () => {
+        dispatch(logout())
+    }
+
     return (
-        <nav className={styles.mainMenu}>
+        <nav  ref={selectRef} className={styles.mainMenu}>
             <div className={styles.menuList}>
                 <div className={styles.menuButton} onClick={onClickOpenMenu}>
                     <svg width="24" height="24" viewBox="0 0 16 12" fill="#323232"
@@ -47,9 +59,13 @@ const Navigation:React.FC<NavigationType> = ({onClickOpenMenu}) => {
                     </Link>
                 </div>
                 <div className={styles.menuItem}>
-                    <Link to={"/auth"}>
-                        Войти
-                    </Link>
+                    {
+                        isAuth ? (<div onClick={onClickLogout}>
+                            Выйти
+                        </div>) : (<Link to={"/auth"}>
+                            Войти
+                        </Link>)
+                    }
                 </div>
             </div>
         </nav>

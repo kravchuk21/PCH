@@ -6,7 +6,6 @@ type ButtonType = {
     disabled? :boolean
 }
 
-
 const Button: React.FC<ButtonType> = ({text, disabled = false}) => {
     return (
         <button disabled={disabled} className={styles.button}>{text}</button>

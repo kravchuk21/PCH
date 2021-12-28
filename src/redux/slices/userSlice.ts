@@ -5,6 +5,7 @@ import {LoadingState} from "../Types";
 
 export interface UserState {
     data: ResponseUser | null;
+    isAuth: boolean
     errorMassage: string
     loadingState: LoadingState
 }
@@ -12,6 +13,7 @@ export interface UserState {
 const initialState: UserState = {
     data: null,
     errorMassage: '',
+    isAuth: false,
     loadingState: LoadingState.Never
 };
 
@@ -46,6 +48,14 @@ export const fetchSignUp = createAsyncThunk(
     }
 )
 
+export const logout = createAsyncThunk(
+    'logout',
+    async (_, {dispatch}) => {
+        localStorage.removeItem('token');
+        dispatch(setIsAuth(false))
+    }
+)
+
 
 export const userSlice = createSlice({
     name: 'user',
@@ -57,6 +67,10 @@ export const userSlice = createSlice({
         setErrorMassage: (state, action: PayloadAction<string>) => {
             state.errorMassage = action.payload;
         },
+        setIsAuth: (state, action: PayloadAction<boolean>) => {
+            state.data = null
+            state.isAuth = action.payload;
+        },
     },
     extraReducers: builder => {
         builder
@@ -65,6 +79,7 @@ export const userSlice = createSlice({
             })
             .addCase(getAuthUserDate.fulfilled, (state, action) => {
                 state.data = action.payload
+                state.isAuth = true
                 state.loadingState = LoadingState.Loaded
             })
             .addCase(getAuthUserDate.rejected, (state, action) => {
@@ -74,7 +89,7 @@ export const userSlice = createSlice({
     },
 });
 
-export const {setUserData, setErrorMassage} = userSlice.actions;
+export const {setUserData, setErrorMassage, setIsAuth} = userSlice.actions;
 
 export default userSlice.reducer;
 

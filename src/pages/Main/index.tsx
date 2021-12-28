@@ -1,23 +1,29 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import MainImage from "../../assets/img/mainImage.png"
 import styles from "./Main.module.css"
 import clsx from "classnames"
 import {isDesktop, isMobile} from "react-device-detect";
+import {useDispatch, useSelector} from "react-redux";
+//assets
+import MainImage from "../../assets/img/mainImage.png"
 import LocationImg from "../../assets/img/location.png";
 import FreeImg from "../../assets/img/free.png";
 import ShaurmaImg from "../../assets/img/shaurma.png";
-import Navigation from "../../components/Navigation";
-import Footer from "../../components/Footer";
+import NextImg from "../../assets/img/arrow.png"
+import TomatoImg from "../../assets/img/tomato.png"
+import CucumberImg from "../../assets/img/cucumber.png"
+import SalatImg from "../../assets/img/salat.png"
+//components
+import Slide from "../../components/SlideItem";
 import DesctopNavigation from "../../components/DesctopNavigation";
 import RestaurantCard from "../../components/RestaurantCard";
-import {useDispatch, useSelector} from "react-redux";
-import {fetchPopularProductItems, setActivePopularItem} from "../../redux/slices/popularProductsSlice";
-import {RootState} from "../../redux/store";
-import {LoadingState} from "../../redux/Types";
-import Slide from "../../components/SlideItem";
-import NextImg from "../../assets/img/arrow.png"
 import MainLoader from '../../components/loaders/MainLoader';
+import Navigation from "../../components/Navigation";
+import Footer from "../../components/Footer";
+//redux
+import {LoadingState} from "../../redux/Types";
+import {RootState} from "../../redux/store";
+import {fetchPopularProductItems, setActivePopularItem} from "../../redux/slices/popularProductsSlice";
 
 const Main: React.FC = () => {
     const [menuVisible, setMenuVisible] = React.useState(false)
@@ -51,6 +57,15 @@ const Main: React.FC = () => {
             )}
             {isDesktop && (
                 <DesctopNavigation/>
+            )}
+            {isDesktop && (
+                <>
+                    <img className={clsx(styles.decorationImg, styles.decorationImg1)} src={TomatoImg} alt=""/>
+                    <img className={clsx(styles.decorationImg, styles.decorationImg2)} src={CucumberImg} alt=""/>
+                    <img className={clsx(styles.decorationImg, styles.decorationImg3)} src={SalatImg} alt=""/>
+                    <img className={clsx(styles.decorationImg, styles.decorationImg4)} src={TomatoImg} alt=""/>
+                    <img className={clsx(styles.decorationImg, styles.decorationImg5)} src={CucumberImg} alt=""/>
+                </>
             )}
             <div className={styles.mainHeader}>
                 {!isDesktop && (
@@ -137,8 +152,8 @@ const Main: React.FC = () => {
                     </div>
                 )}
                 {popularItemsLoadingState === LoadingState.Loading && isMobile && (
-                    Array(5).fill(0).map(_ => (
-                        <div className={styles.popularItems}>
+                    Array(5).fill(0).map((_, index) => (
+                        <div key={index + new Date().toDateString()} className={styles.popularItems}>
                             <MainLoader/>
                         </div>
                     ))

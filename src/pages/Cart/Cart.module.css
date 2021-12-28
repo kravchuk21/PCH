@@ -2,9 +2,6 @@
     padding: 30px;
 }
 
-.cartItems {
-}
-
 .totalPrice {
     font-weight: 900;
     font-size: 18px;
@@ -15,10 +12,8 @@
     color: #FBB347;
 }
 
-
 .info {
     color: #9C9C9C;
-
 }
 
 .infoTitle {
@@ -32,6 +27,7 @@
     font-size: 12px;
     margin-bottom: 18px;
 }
+
 .title {
     font-weight: 800;
     font-size: 24px;

@@ -1,12 +1,14 @@
 import React from 'react';
+import {isDesktop, isMobile} from "react-device-detect";
+import {Link} from "react-router-dom";
 import styles from "./Vacancies.module.css"
+//components
 import ButtonBack from "../../components/ButtonBack";
+import DesctopNavigation from "../../components/DesctopNavigation";
+//assets
 import CirclesImg from "../../assets/img/svg/circles.svg";
 import PersonImg from "../../assets/img/person.png";
 import Person2Img from "../../assets/img/peros 2.png";
-import {Link} from "react-router-dom";
-import {isDesktop, isMobile} from "react-device-detect";
-import DesctopNavigation from "../../components/DesctopNavigation";
 
 
 const Vacancies: React.FC = () => {

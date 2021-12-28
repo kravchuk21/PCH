@@ -1,8 +1,10 @@
 import React from 'react';
 import styles from "./Restaurants.module.css"
+//components
 import ButtonBack from "../../components/ButtonBack";
-import FreeImg from "../../assets/img/free.png";
 import RestaurantCard from "../../components/RestaurantCard";
+//assets
+import FreeImg from "../../assets/img/free.png";
 
 const Restaurants: React.FC = () => {
     return (

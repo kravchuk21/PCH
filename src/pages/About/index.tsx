@@ -3,6 +3,7 @@ import styles from "./About.module.css"
 import Button from "../../components/Button";
 import ButtonBack from "../../components/ButtonBack";
 import LocationImg from "../../assets/img/location.png"
+import {Link} from 'react-router-dom';
 
 
 const Cart: React.FC = () => {
@@ -36,7 +37,9 @@ const Cart: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <Button text="Написать в поддержку"/>
+            <Link to={"/support"}>
+                <Button text="Написать в поддержку"/>
+            </Link>
         </div>
     );
 };

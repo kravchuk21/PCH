@@ -1,14 +1,18 @@
 import React from 'react';
 import {isDesktop, isMobile} from "react-device-detect";
+import {useForm} from "react-hook-form";
+import {yupResolver} from '@hookform/resolvers/yup';
+import clsx from "classnames";
+import styles from "./Support.module.css"
+//assets
+import SupportPersonImg from "../../assets/img/supportPerson.png"
+//components
 import DesctopNavigation from "../../components/DesctopNavigation";
 import ButtonBack from "../../components/ButtonBack";
-import clsx from "classnames";
-import {useForm} from "react-hook-form";
-import {SupportFormSchema} from "../../utils/validation";
+//api
 import {SupportDto} from "../../api/types";
-import {yupResolver} from '@hookform/resolvers/yup';
-import styles from "./Support.module.css"
-import SupportPersonImg from "../../assets/img/supportPerson.png"
+//utils
+import {SupportFormSchema} from "../../utils/validation";
 
 interface IFormInputs {
     text: string
@@ -23,6 +27,7 @@ const Support: React.FC = () => {
     const onSubmit = async (dto: SupportDto) => {
         console.log(dto)
     }
+
     return (
         <div className={styles.support}>
             {isDesktop && (

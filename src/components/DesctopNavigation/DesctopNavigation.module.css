@@ -4,7 +4,7 @@
 }
 
 .mainMenu.whiteMode {
-    background: #FFFFFF;
+    background: none;
 }
 
 .content {
@@ -22,18 +22,15 @@
 
 .menuItem {
     margin-right: 20px;
+    cursor: pointer;
 }
 
 .mainMenu.whiteMode .menuItem a{
     color: #323232;
 }
 
-.menuItem a {
+.menuItem a, .menuItem div {
     font-weight: 800;
     font-size: 16px;
     color: #FFFFFF;
-}
-
-
-.menuButton {
 }

@@ -26,11 +26,7 @@ export const fetchProductItems = createAsyncThunk(
 export const productsSlice = createSlice({
     name: 'products',
     initialState,
-    reducers: {
-        // setCount: (state, action: PayloadAction<string>) => {
-        //     // const item = state.items.filter(item => action.payload === item.id)
-        // }
-    },
+    reducers: {},
     extraReducers: builder => {
         builder
             .addCase(fetchProductItems.pending, state => {
