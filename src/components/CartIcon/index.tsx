@@ -1,10 +1,14 @@
 import React from 'react';
+import {useSelector} from 'react-redux';
 import {Link} from "react-router-dom";
+import {RootState} from '../../redux/store';
 import styles from "./CartIcon.module.css"
+import clsx from "classnames"
 
 const MyComponent = () => {
+    const totalCount = useSelector((state: RootState) => state.cart.totalCount)
     return (
-        <Link to="/cart" className={styles.cartIcon}>
+        <Link to="/cart" className={clsx(styles.cartIcon, {[styles.active]: totalCount})}>
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                  xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -18,6 +22,7 @@ const MyComponent = () => {
                 <path d="M16 21H18" stroke="white" strokeWidth="2" strokeLinecap="round"
                       strokeLinejoin="round"/>
             </svg>
+            {totalCount ? <span>{totalCount}</span> : null}
         </Link>
     );
 };

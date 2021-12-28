@@ -29,8 +29,10 @@ const Main: React.FC = () => {
     const dispatch = useDispatch()
 
     React.useEffect(() => {
-        dispatch(fetchPopularProductItems())
-    }, [dispatch])
+        if (popularItems.length === 0) {
+            dispatch(fetchPopularProductItems())
+        }
+    }, [dispatch, popularItems.length])
 
     const onClickToggleOpenMenu = () => {
         setMenuVisible(!menuVisible)

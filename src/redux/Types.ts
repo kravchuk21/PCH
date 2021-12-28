@@ -11,26 +11,31 @@ export type Product = {
     title: string
     description: string
     category: number
-    addiction? : Addiction[]
-    select? : Select[]
-    radio? : Check[]
-    sizes : Sizes[]
+    select?: Select[]
+    radio?: Check[]
+    sizes: Sizes[]
 }
 
 
-export type Addiction = {
+export interface ProductToCart {
+    id: string
+    picture: string
     title: string
-    item : AddictionItem[]
+    price: number
+    select: SelectItem | null
+    radio: CheckItem | null
+    sizes: Sizes
 }
 
-export type AddictionItem = {
-    title: string
-    price : number
+export interface ProductInCart extends ProductToCart {
+    count: number,
+    totalPrice: number
 }
+
 
 export type Check = {
     title: string
-    item : CheckItem[]
+    item: CheckItem[]
 }
 
 export type CheckItem = {
@@ -40,12 +45,12 @@ export type CheckItem = {
 
 export type Select = {
     title: string
-    item : SelectItem[]
+    item: SelectItem[]
 }
 
 export type SelectItem = {
     title: string
-    price : number
+    price: number
 }
 
 export type Sizes = {

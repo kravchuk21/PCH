@@ -25,13 +25,8 @@ const Menu: React.FC = () => {
         dispatch(fetchProductItems(activeCategory))
         if (category.length <= 1) {
             dispatch(fetchCategoryItems())
-
         }
     }, [dispatch, activeCategory, category.length])
-
-    const onAddProduct = (id: string) => {
-        console.log(id)
-    }
 
     return (
         <div className={styles.menu}>
@@ -81,8 +76,7 @@ const Menu: React.FC = () => {
                             <MenuItemCard key={product.title + product.id}
                                           id={product.id}
                                           title={product.title}
-                                          picture={product.picture}
-                                          addProduct={onAddProduct} count={0}/>
+                                          picture={product.picture}/>
                         ))
                     )}
                 </div>

@@ -6,7 +6,7 @@ import SelectPopup from '../../components/SelectPopup';
 import {RootState} from '../../redux/store';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchProductData} from "../../redux/slices/productSlice";
-import {Check, LoadingState, Select} from '../../redux/Types';
+import {Check, LoadingState, ProductToCart, Select} from '../../redux/Types';
 import {useParams} from "react-router";
 import Error from "../../components/Error";
 import {SizeType} from '../../api/types';
@@ -14,6 +14,7 @@ import clsx from 'classnames';
 import CheckSelect from "../../components/CheckSelect";
 import Loader from "../../components/loaders/Loader";
 import CartIcon from "../../components/CartIcon";
+import {addItem} from '../../redux/slices/cartSlice';
 
 const ProductPage: React.FC = () => {
     const dispatch = useDispatch()
@@ -42,6 +43,21 @@ const ProductPage: React.FC = () => {
     }
 
     const onAddProduct = (): void => {
+        if (productData) {
+            const result: ProductToCart = {
+                id: productData.id,
+                title: productData.title,
+                picture: productData.picture,
+                sizes: productData.sizes[activeSize],
+                radio: productData.radio ? productData.radio[0].item[activeCheckItem] : null,
+                select: productData.select ? productData.select[0].item[activeSelectItem] : null,
+                price: (productData.sizes[activeSize].price) +
+                    (productData.radio ? productData.radio[0].item[activeCheckItem].price : 0) +
+                    (productData.select ? productData.select[0].item[activeSelectItem].price : 0)
+
+            }
+            dispatch(addItem(result))
+        }
     }
 
     return (

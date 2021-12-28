@@ -5,9 +5,9 @@
     align-items: center;
 }
 .cartIcon.active {
-    background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%), linear-gradient(180deg, #E5E5E5 0%, rgba(229, 229, 229, 0) 100%);
+    background: #f5a452;
     border-radius: 100000px;
-    border: 2px solid #FFFFFF;
+    border: 1px solid #FFFFFF;
 }
 
 .cartIcon.active span {
