@@ -65,3 +65,10 @@ textarea {
     bottom: 0;
     right: 20px;
 }
+
+.messages {
+    display: block;
+    color: #FBB347;
+    text-align: center;
+    margin: 10px 0;
+}

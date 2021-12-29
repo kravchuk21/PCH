@@ -25,7 +25,7 @@
     cursor: pointer;
 }
 
-.mainMenu.whiteMode .menuItem a{
+.mainMenu.whiteMode .menuItem a, .mainMenu.whiteMode .menuItem div {
     color: #323232;
 }
 

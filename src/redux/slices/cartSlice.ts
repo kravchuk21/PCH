@@ -19,6 +19,11 @@ export const cartSlice = createSlice({
     name: 'cart',
     initialState,
     reducers: {
+        setItems: (state) => {
+            state.items = []
+            state.totalPrice = 0
+            state.totalCount = 0
+        },
         addItem: (state, action: PayloadAction<ProductToCart>) => {
             const item = state.items.find(item => _.isEqual(item, {
                 ...action.payload,
@@ -92,6 +97,7 @@ export const cartSlice = createSlice({
 })
 
 export const {
+    setItems,
     addItem,
     addItemCount,
     removeItemCount

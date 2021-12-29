@@ -24,6 +24,7 @@ import {RootState} from "./redux/store";
 function App() {
     const dispatch = useDispatch()
     const initialized = useSelector((state: RootState) => state.app.initialized)
+    const isAuth = useSelector((state: RootState) => state.user.isAuth)
 
     React.useEffect(() => {
         dispatch(initializeApp())
@@ -37,7 +38,7 @@ function App() {
         <div className="App">
             <Routes>
                 <Route path={"product/:id"} element={<Product/>}/>
-                <Route path={"cart"} element={<Cart/>}/>
+                <Route path={"cart"} element={isAuth ? <Cart/> : <Login/>}/>
                 {isMobile && <Route path={"about"} element={<About/>}/>}
                 {isMobile && <Route path={"restaurants"} element={<Restaurants/>}/>}
                 <Route path={"vacancies"} element={<Vacancies/>}/>
@@ -46,7 +47,7 @@ function App() {
                 <Route path={"auth"} element={<Login/>}/>
                 <Route path={"auth/login"} element={<Login/>}/>
                 <Route path={"auth/register"} element={<Register/>}/>
-                <Route path={"support"} element={<Support/>}/>
+                <Route path={"support"} element={isAuth ? <Support/> : <Login/>}/>
                 <Route path={"*"} element={<NotFoundPage/>}/>
                 <Route path={"/"} element={<Main/>}/>
             </Routes>

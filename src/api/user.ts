@@ -14,6 +14,7 @@ export const userAPI = {
     },
     async login(dto: LoginDto) {
         const {data} = await instance.post<LoginDto, { data: ResponseUser }>('/auth/login', dto);
+        console.log(data)
         return data;
     },
     async getMe(token: string) {

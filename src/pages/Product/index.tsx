@@ -87,9 +87,6 @@ const ProductPage: React.FC = () => {
                                         <h2 className={styles.descriptionTitle}>Описание</h2>
                                         <p className={styles.descriptionText}>{productData.description}</p>
                                     </div>
-                                    <div onClick={onAddProduct}>
-                                        <Button text={`Добавить`}/>
-                                    </div>
                                 </div>
                             )}
                             <div className={clsx(styles.productImage, {[styles.productImageDesctop]: isDesktop})}>
@@ -110,7 +107,7 @@ const ProductPage: React.FC = () => {
                             }
                         </div>
                     </div>
-                    <div className={styles.productInfo}>
+                    <div className={clsx(styles.productInfo, {[styles.productInfoDesctop]: isDesktop})}>
                         {isMobile && (
                             <div className={styles.productTitle}>
                                 <h2 className={styles.productName}>{productData.title}</h2>
@@ -133,38 +130,37 @@ const ProductPage: React.FC = () => {
                         )}
                         {
                             productData.radio && productData.radio.map((check: Check, index) => (
-                            <CheckSelect key={check.title + index}
-                            checkTitle={check.title}
-                            items={check.item}
-                            activeCheckItem={check.item[activeCheckItem]}
-                            onClickCheckType={onCheckType}/>
+                                <CheckSelect key={check.title + index}
+                                             checkTitle={check.title}
+                                             items={check.item}
+                                             activeCheckItem={check.item[activeCheckItem]}
+                                             onClickCheckType={onCheckType}/>
                             ))
                         }
                         {
                             productData.select && productData.select.map((select: Select, index) => (
-                            <SelectPopup key={select.title + index}
-                            selectTitle={select.title}
-                            items={select.item}
-                            activeSelectItem={select.item[activeSelectItem]}
-                            onClickSelectType={onSelectType}
-                            />
+                                <SelectPopup key={select.title + index}
+                                             selectTitle={select.title}
+                                             items={select.item}
+                                             activeSelectItem={select.item[activeSelectItem]}
+                                             onClickSelectType={onSelectType}
+                                />
                             ))
                         }
                         {isMobile && (
                             <div className={styles.description}>
-                            <h2 className={styles.descriptionTitle}>Описание</h2>
-                            <p className={styles.descriptionText}>{productData.description}</p>
+                                <h2 className={styles.descriptionTitle}>Описание</h2>
+                                <p className={styles.descriptionText}>{productData.description}</p>
                             </div>
-                            )}
-                            <div onClick={onAddProduct}>
+                        )}
+                        <div onClick={onAddProduct}>
                             <Button text={`Добавить`}/>
-                            </div>
-                            </div>
-                            </div>
-                            )}
-
+                        </div>
                     </div>
-                    );
-                    };
+                </div>
+            )}
+        </div>
+    );
+};
 
-                    export default ProductPage;
+export default ProductPage;
