@@ -31,6 +31,7 @@ const CartItem: React.FC<CartItemType> = ({data}) => {
                 <p className={styles.productInfoText}>Размер: {data.sizes}</p>
                 {data.radio && <p className={styles.productInfoText}>Вариант: {data.radio}</p>}
                 {data.select && <p className={styles.productInfoText}>Выбрано: {data.select}</p>}
+                {data.addiction && <p className={styles.productInfoText}>Добавки: {data.addiction.join(", ")}</p>}
 
                 <p className={styles.productInfoText}>Количество :</p>
                 <div className={styles.productCount}>

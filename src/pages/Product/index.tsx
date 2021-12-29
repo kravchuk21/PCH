@@ -20,6 +20,7 @@ import {Check, LoadingState, ProductToCart, Select} from '../../redux/Types';
 import {SizeType} from '../../api/types';
 import {isMobile, isDesktop} from 'react-device-detect';
 import DesctopNavigation from '../../components/DesctopNavigation';
+import AddictionSelect from '../../components/AddictionSelect';
 
 const ProductPage: React.FC = () => {
     const dispatch = useDispatch()
@@ -30,6 +31,7 @@ const ProductPage: React.FC = () => {
     const [activeSelectItem, setActiveSelectItem] = React.useState(0)
     const [activeSize, setActiveSize] = React.useState(0)
     const [activeCheckItem, setActiveCheckItem] = React.useState(0)
+    const [activeAddictionItems, setActiveAddictionItems] = React.useState<Array<string>>([])
 
     React.useEffect(() => {
         if (params.id) {
@@ -43,6 +45,15 @@ const ProductPage: React.FC = () => {
     const onCheckType = (id: number): void => {
         setActiveCheckItem(id)
     }
+
+    const onClickAddictionType = (title: string) => {
+        const item = activeAddictionItems.find(item => item === title)
+        if (!item) {
+            return setActiveAddictionItems([...activeAddictionItems, title])
+        } else {
+            return setActiveAddictionItems([...activeAddictionItems.filter(item => item !== title)])
+        }
+    }
     const onAddProduct = (): void => {
         if (productData) {
             const result: ProductToCart = {
@@ -52,8 +63,12 @@ const ProductPage: React.FC = () => {
                 sizes: productData.sizes[activeSize].title,
                 radio: productData.radio ? productData.radio[0].item[activeCheckItem].title : null,
                 select: productData.select ? productData.select[0].item[activeSelectItem].title : null,
+                addiction: productData.addiction ? activeAddictionItems : null,
                 price: (productData.sizes[activeSize].price) +
                     (productData.radio ? productData.radio[0].item[activeCheckItem].price : 0) +
+                    (productData.addiction ? (productData.addiction.filter(item => activeAddictionItems.find(i => i === item.title)).reduce((a, b) => {
+                        return a + b.price
+                    }, 0)) : 0) +
                     (productData.select ? productData.select[0].item[activeSelectItem].price : 0)
             }
             dispatch(addItem(result))
@@ -146,6 +161,16 @@ const ProductPage: React.FC = () => {
                                              onClickSelectType={onSelectType}
                                 />
                             ))
+                        }
+                        {
+                            productData.addiction && (
+                                <>
+
+                                    <AddictionSelect items={productData.addiction}
+                                                     activeAddictionItem={activeAddictionItems}
+                                                     onClickAddictionType={onClickAddictionType}/>
+                                </>
+                            )
                         }
                         {isMobile && (
                             <div className={styles.description}>

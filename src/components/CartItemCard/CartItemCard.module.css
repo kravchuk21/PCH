@@ -30,6 +30,7 @@
 .productInfo {
     padding: 0 !important;
     margin-left: 16px;
+    max-width: 150px;
 }
 .productTitle {
     font-weight: 900;

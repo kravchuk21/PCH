@@ -12,6 +12,7 @@ export type Product = {
     description: string
     category: number
     select?: Select[]
+    addiction?: Addiction[]
     radio?: Check[]
     sizes: Sizes[]
 }
@@ -22,6 +23,7 @@ export interface ProductToCart {
     picture: string
     title: string
     price: number
+    addiction: string[] | null
     select: string | null
     radio: string | null
     sizes: string
@@ -60,4 +62,9 @@ export type Sizes = {
 export type Category = {
     title: string,
     id: number
+}
+
+export type Addiction = {
+    title: string,
+    price: number
 }
