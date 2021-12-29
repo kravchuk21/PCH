@@ -38,7 +38,7 @@ const Support: React.FC = () => {
                 setLoading(true)
                 mailAPI.support({email: data.email, fullName: data.fullName, text: dto.text}).then(res => {
                     setLoading(false)
-                    setErrorMessage("Заказ успешно отправлен")
+                    setErrorMessage("Сообщение успешно отправлен")
                 })
             }
         } catch (err) {

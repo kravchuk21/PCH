@@ -4,10 +4,7 @@ import PersonImg from "../../assets/img/person.png"
 import Button from "../../components/Button";
 import ButtonBack from '../../components/ButtonBack';
 
-type VacancyType = {}
-
-
-const Vacancy: React.FC<VacancyType> = () => {
+const Vacancy: React.FC = () => {
     return (
         <div className={styles.vacancy}>
             <div className={styles.vacancyHeader}>
@@ -53,7 +50,6 @@ const Vacancy: React.FC<VacancyType> = () => {
                     <Button text="Позвонить"/>
                 </a>
             </div>
-
         </div>
     );
 };

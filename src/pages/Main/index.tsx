@@ -132,7 +132,9 @@ const Main: React.FC = () => {
                         <Slide id={activeSliderItem.id} title={activeSliderItem.title}
                                description={activeSliderItem.description}
                                img={activeSliderItem.picture}
-                               price={activeSliderItem.sizes[0].price}/>
+                               price={(activeSliderItem.sizes[0].price) +
+                                   (activeSliderItem.radio ? activeSliderItem.radio[0].item[0].price : 0) +
+                                   (activeSliderItem.select ? activeSliderItem.select[0].item[0].price : 0)}/>
                         <button className={styles.next} onClick={() => onClickToggleActivePopularItem(1)}><img
                             src={NextImg} alt="next"/></button>
                     </div>
@@ -144,11 +146,12 @@ const Main: React.FC = () => {
                 )}
                 {popularItemsLoadingState === LoadingState.Loaded && isMobile && (
                     <div className={styles.popularItems}>
-                        {popularItems.map((item, index) => <Slide key={item.title + index} id={item.id}
-                                                                  title={item.title}
-                                                                  description={activeSliderItem.description}
+                        {popularItems.map((item, index) => <Slide id={item.id} title={item.title}
+                                                                  description={item.description}
                                                                   img={item.picture}
-                                                                  price={activeSliderItem.sizes[0].price}/>)}
+                                                                  price={(item.sizes[0].price) +
+                                                                      (item.radio ? item.radio[0].item[0].price : 0) +
+                                                                      (item.select ? item.select[0].item[0].price : 0)}/>)}
                     </div>
                 )}
                 {popularItemsLoadingState === LoadingState.Loading && isMobile && (

@@ -26,7 +26,7 @@ const Cart: React.FC = () => {
                 setLoading(true)
                 mailAPI.order({email: data.email, fullName: data.fullName, data: items}).then(res => {
                     setLoading(false)
-                    setErrorMessage("Сообщение успешно отправлен")
+                    setErrorMessage("Сообщение успешно отправлено")
                     dispatch(setItems())
                 })
             }
