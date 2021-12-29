@@ -96,6 +96,9 @@ const ProductPage: React.FC = () => {
                                     <span className={styles.productPrice}>Цена: {
                                         (productData.sizes[activeSize].price) +
                                         (productData.radio ? productData.radio[0].item[activeCheckItem].price : 0) +
+                                        (productData.addiction ? (productData.addiction.filter(item => activeAddictionItems.find(i => i === item.title)).reduce((a, b) => {
+                                            return a + b.price
+                                        }, 0)) : 0) +
                                         (productData.select ? productData.select[0].item[activeSelectItem].price : 0)}
                                         р.</span>
                                     <div className={styles.description}>
@@ -129,6 +132,9 @@ const ProductPage: React.FC = () => {
                                 <span className={styles.productPrice}>{
                                     (productData.sizes[activeSize].price) +
                                     (productData.radio ? productData.radio[0].item[activeCheckItem].price : 0) +
+                                    (productData.addiction ? (productData.addiction.filter(item => activeAddictionItems.find(i => i === item.title)).reduce((a, b) => {
+                                        return a + b.price
+                                    }, 0)) : 0) +
                                     (productData.select ? productData.select[0].item[activeSelectItem].price : 0)}
                                     р.</span>
                             </div>
