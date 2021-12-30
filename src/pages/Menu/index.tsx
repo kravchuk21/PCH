@@ -1,26 +1,28 @@
 import React from 'react';
 import styles from "./Menu.module.css"
-import ButtonBack from "../../components/ButtonBack";
 import clsx from "classnames"
 import {Link} from "react-router-dom";
+import {useDispatch, useSelector} from "react-redux";
+//components
 import MenuProductCardLoader from "../../components/loaders/MenuProductCardLoader";
 import MenuItemCard from "../../components/MenuItemCard";
-import {useDispatch, useSelector} from "react-redux";
+import CategoryLoader from "../../components/loaders/CategoryLoader";
+import ButtonBack from "../../components/ButtonBack";
+import Error from "../../components/Error";
+import CartIcon from '../../components/CartIcon';
+//redux
 import {RootState} from "../../redux/store";
 import {LoadingState} from '../../redux/Types';
 import {fetchCategoryItems, setActiveCategory} from '../../redux/slices/categorySlice';
 import {fetchProductItems} from "../../redux/slices/productsSlice";
-import CategoryLoader from "../../components/loaders/CategoryLoader";
-import Error from "../../components/Error";
-import CartIcon from '../../components/CartIcon';
 
 const Menu: React.FC = () => {
     const products = useSelector((state: RootState) => state.products.items)
+    const dispatch = useDispatch()
     const productsLoadingState = useSelector((state: RootState) => state.products.loadingState)
     const category = useSelector((state: RootState) => state.category.items)
     const activeCategory = useSelector((state: RootState) => state.category.activeCategory)
     const categoryLoadingState = useSelector((state: RootState) => state.category.loadingState)
-    const dispatch = useDispatch()
 
     React.useEffect(() => {
         dispatch(fetchProductItems(activeCategory))

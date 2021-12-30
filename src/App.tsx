@@ -10,16 +10,32 @@ import Restaurants from "./pages/Restaurants";
 import Vacancies from "./pages/Vacancies";
 import Vacancy from "./pages/Vacancy";
 import Main from "./pages/Main";
-import Register from './pages/Auth/forms/Register';
-import Login from './pages/Auth/forms/Login';
-import NotFoundPage from './pages/NotFoundPage';
-import Support from "./pages/Support";
-//components
-import Loader from "./components/loaders/Loader";
 //redux
 import {useDispatch, useSelector} from "react-redux";
 import {initializeApp} from "./redux/slices/appSlice";
 import {RootState} from "./redux/store";
+//components
+import Loader from "./components/loaders/Loader";
+//pages
+import NotFoundPage from './pages/NotFoundPage';
+import Support from "./pages/Support";
+
+const Login = React.lazy(() => import('./pages/Auth/forms/Login'));
+const Register = React.lazy(() => import('./pages/Auth/forms/Register'));
+const Sepport = React.lazy(() => import('./pages/Auth/forms/Register'));
+
+
+const LoginPage = () => (<React.Suspense fallback={<Loader/>}>
+    <Login/>
+</React.Suspense>)
+
+const RegisterPage = () => (<React.Suspense fallback={<Loader/>}>
+    <Register/>
+</React.Suspense>)
+
+const SupportPage = () => (<React.Suspense fallback={<Loader/>}>
+    <Support/>
+</React.Suspense>)
 
 function App() {
     const dispatch = useDispatch()
@@ -44,10 +60,10 @@ function App() {
                 <Route path={"vacancies"} element={<Vacancies/>}/>
                 <Route path={"vacancies/:id"} element={<Vacancy/>}/>
                 <Route path={"menu"} element={<Menu/>}/>
-                <Route path={"auth"} element={<Login/>}/>
-                <Route path={"auth/login"} element={<Login/>}/>
-                <Route path={"auth/register"} element={<Register/>}/>
-                <Route path={"support"} element={isAuth ? <Support/> : <Login/>}/>
+                <Route path={"auth"} element={<LoginPage/>}/>
+                <Route path={"auth/login"} element={<LoginPage/>}/>
+                <Route path={"auth/register"} element={<RegisterPage/>}/>
+                <Route path={"support"} element={isAuth ? <SupportPage/> : <LoginPage/>}/>
                 <Route path={"*"} element={<NotFoundPage/>}/>
                 <Route path={"/"} element={<Main/>}/>
             </Routes>
