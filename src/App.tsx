@@ -26,49 +26,49 @@ const Sepport = React.lazy(() => import('./pages/Auth/forms/Register'));
 
 
 const LoginPage = () => (<React.Suspense fallback={<Loader/>}>
-        <Login/>
+    <Login/>
 </React.Suspense>)
 
 const RegisterPage = () => (<React.Suspense fallback={<Loader/>}>
-        <Register/>
+    <Register/>
 </React.Suspense>)
 
 const SupportPage = () => (<React.Suspense fallback={<Loader/>}>
-        <Support/>
+    <Support/>
 </React.Suspense>)
 
 function App() {
-        const dispatch = useDispatch()
-        const initialized = useSelector((state: RootState) => state.app.initialized)
-        const isAuth = useSelector((state: RootState) => state.user.isAuth)
+    const dispatch = useDispatch()
+    const initialized = useSelector((state: RootState) => state.app.initialized)
+    const isAuth = useSelector((state: RootState) => state.user.isAuth)
 
-        React.useEffect(() => {
-                dispatch(initializeApp())
-        }, [dispatch])
+    React.useEffect(() => {
+        dispatch(initializeApp())
+    }, [dispatch])
 
-        if (!initialized) {
-                return <Loader/>
-        }
+    if (!initialized) {
+        return <Loader/>
+    }
 
-        return (
-                <div className="App">
-                        <Routes>
-                                <Route path={"product/:id"} element={<Product/>}/>
-                                <Route path={"cart"} element={isAuth ? <Cart/> : <Login/>}/>
-                                {isMobile && <Route path={"about"} element={<About/>}/>}
-                                {isMobile && <Route path={"restaurants"} element={<Restaurants/>}/>}
-                                <Route path={"vacancies"} element={<Vacancies/>}/>
-                                <Route path={"vacancies/:id"} element={<Vacancy/>}/>
-                                <Route path={"menu"} element={<Menu/>}/>
-                                <Route path={"auth"} element={<LoginPage/>}/>
-                                <Route path={"auth/login"} element={<LoginPage/>}/>
-                                <Route path={"auth/register"} element={<RegisterPage/>}/>
-                                <Route path={"support"} element={isAuth ? <SupportPage/> : <LoginPage/>}/>
-                                <Route path={"*"} element={<NotFoundPage/>}/>
-                                <Route path={"/"} element={<Main/>}/>
-                        </Routes>
-                </div>
-        );
+    return (
+        <div className="App">
+            <Routes>
+                <Route path={"product/:id"} element={<Product/>}/>
+                <Route path={"cart"} element={isAuth ? <Cart/> : <Login/>}/>
+                {isMobile && <Route path={"about"} element={<About/>}/>}
+                {isMobile && <Route path={"restaurants"} element={<Restaurants/>}/>}
+                <Route path={"vacancies"} element={<Vacancies/>}/>
+                <Route path={"vacancies/:id"} element={<Vacancy/>}/>
+                <Route path={"menu"} element={<Menu/>}/>
+                <Route path={"auth"} element={<LoginPage/>}/>
+                <Route path={"auth/login"} element={<LoginPage/>}/>
+                <Route path={"auth/register"} element={<RegisterPage/>}/>
+                <Route path={"support"} element={isAuth ? <SupportPage/> : <LoginPage/>}/>
+                <Route path={"*"} element={<NotFoundPage/>}/>
+                <Route path={"/"} element={<Main/>}/>
+            </Routes>
+        </div>
+    );
 }
 
 export default App;

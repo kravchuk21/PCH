@@ -1,27 +1,27 @@
 export type LoginDto = {
-        email: string;
-        password: string;
+    email: string;
+    password: string;
 };
 
 export type SupportDto = {
-        text: string;
+    text: string;
 };
 
 export type CreateUserDto = {
-        fullName: string;
+    fullName: string;
 } & LoginDto;
 
 export type ResponseUser = {
-        createdAt: string;
-        email: string;
-        fullName: string;
-        id: number;
-        token: string;
-        updatedAt: string;
+    createdAt: string;
+    email: string;
+    fullName: string;
+    id: number;
+    token: string;
+    updatedAt: string;
 };
 
 
 export type SizeType = {
-        title: string,
-        price: number
+    title: string,
+    price: number
 }

@@ -1,21 +1,21 @@
 .cartIcon {
-        padding: 3px 14px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    padding: 3px 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cartIcon.active {
-        background: #f5a452;
-        border-radius: 100000px;
-        border: 1px solid #FFFFFF;
+    background: #f5a452;
+    border-radius: 100000px;
+    border: 1px solid #FFFFFF;
 }
 
 .cartIcon.active span {
-        font-weight: 800;
-        font-size: 18px;
-        line-height: 22px;
-        color: #FFFFFF;
-        display: block;
-        margin-left: 5px;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    color: #FFFFFF;
+    display: block;
+    margin-left: 5px;
 }
