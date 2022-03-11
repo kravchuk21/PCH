@@ -36,7 +36,11 @@ const Support: React.FC = () => {
         try {
             if (data) {
                 setLoading(true)
-                mailAPI.support({email: data.email, fullName: data.fullName, text: dto.text}).then(res => {
+                mailAPI.support({
+                    email: data.email,
+                    fullName: data.fullName,
+                    text: dto.text
+                }).then(res => {
                     setLoading(false)
                     setErrorMessage("Сообщение успешно отправлен")
                 })
@@ -68,7 +72,8 @@ const Support: React.FC = () => {
                     <p className={styles.error}>{errors.text?.message}</p>
                 </div>
                 {errorMessage && <span className={styles.messages}>{errorMessage}</span>}
-                <button disabled={!isValid || isSubmitting || loading} type="submit" className={styles.button}>
+                <button disabled={!isValid || isSubmitting || loading} type="submit"
+                        className={styles.button}>
                     Отправить
                 </button>
             </form>

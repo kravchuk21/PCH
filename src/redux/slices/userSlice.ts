@@ -93,7 +93,7 @@ export const userSlice = createSlice({
                     state.data = action.payload
                     state.isAuth = true
                     state.loadingState = LoadingState.Loaded
-                }else state.loadingState = LoadingState.Error
+                } else state.loadingState = LoadingState.Error
             })
             .addCase(getAuthUserDate.rejected, (state, action) => {
                 state.data = null

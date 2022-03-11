@@ -3,7 +3,7 @@ import styles from "./Button.module.css"
 
 type ButtonType = {
     text: string
-    disabled? :boolean
+    disabled?: boolean
 }
 
 const Button: React.FC<ButtonType> = ({text, disabled = false}) => {

@@ -23,7 +23,8 @@ const AddictionSelect: React.FC<AddictionSelectType> = React.memo(
                             <div key={index + new Date().toDateString()}
                                  className={styles.formGroup}>
                                 <input onChange={() => onCheckItem(item.title)}
-                                       checked={!!activeAddictionItem.find(i => i === item.title)} type="checkbox"
+                                       checked={!!activeAddictionItem.find(i => i === item.title)}
+                                       type="checkbox"
                                        id={item.title}/>
                                 <label htmlFor={item.title}>{item.title}</label>
                             </div>

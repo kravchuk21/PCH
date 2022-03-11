@@ -9,7 +9,7 @@ const initialState: AppState = {
     initialized: false,
 }
 
-export const initializeApp  = createAsyncThunk(
+export const initializeApp = createAsyncThunk(
     'initializeApp ',
     async (_, {dispatch}) => {
         let promise = dispatch(getAuthUserDate())

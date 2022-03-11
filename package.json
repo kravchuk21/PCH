@@ -1,6 +1,6 @@
 {
   "name": "phc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^2.8.5",
@@ -41,14 +41,15 @@
     "yup": "^0.32.11"
   },
   "engines": {
-    "node": "16.13.1"
+    "node": "16.14.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch public/db.json --port 3001"
+    "server": "json-server --watch public/db.json --port 3001",
+    "editorconfig": "editorconfig-checker"
   },
   "proxy": "http://localhost:3001",
   "eslintConfig": {
@@ -68,5 +69,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "editorconfig-checker": "^4.0.2"
   }
 }

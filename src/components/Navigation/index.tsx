@@ -20,12 +20,13 @@ const Navigation: React.FC<NavigationType> = ({onClickOpenMenu}) => {
     }
 
     return (
-        <nav  ref={selectRef} className={styles.mainMenu}>
+        <nav ref={selectRef} className={styles.mainMenu}>
             <div className={styles.menuList}>
                 <div className={styles.menuButton} onClick={onClickOpenMenu}>
                     <svg width="24" height="24" viewBox="0 0 16 12" fill="#323232"
                          xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 5H12V7H0V5ZM0 0H16V2H0V0ZM0 12H7.235V10H0V12Z" fill="#323232"/>
+                        <path d="M0 5H12V7H0V5ZM0 0H16V2H0V0ZM0 12H7.235V10H0V12Z"
+                              fill="#323232"/>
                     </svg>
                 </div>
                 <div className={styles.menuItem}>

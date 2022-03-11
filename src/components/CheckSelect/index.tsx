@@ -22,7 +22,8 @@ const CheckPopup: React.FC<CheckPopupType> = React.memo(
                 <div className={styles.checkItems}>
                     {items && items.map((item, index) => (
                         <div className={styles.checkItem} key={index + item.title}>
-                            <input onChange={() => onCheckItem(index)} checked={activeCheckItem.title === item.title}
+                            <input onChange={() => onCheckItem(index)}
+                                   checked={activeCheckItem.title === item.title}
                                    type="radio" id={item.title} name="radio-group"/>
                             <label htmlFor={item.title}>{item.title}</label>
                         </div>

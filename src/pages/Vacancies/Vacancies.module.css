@@ -1,6 +1,7 @@
 .vacancies {
     padding: 30px;
 }
+
 .vacanciesItems {
     max-width: 900px;
     width: 100%;
@@ -25,7 +26,8 @@
     overflow: hidden;
     position: relative;
 }
-.vacanciesImage img{
+
+.vacanciesImage img {
     z-index: 3;
 }
 
@@ -41,6 +43,7 @@
     margin-left: 16px;
     width: 110px;
 }
+
 .vacanciesTitle {
     font-weight: 900;
     font-size: 14px;

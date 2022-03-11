@@ -77,7 +77,8 @@ const ProductPage: React.FC = () => {
 
     return (
         <div className={styles.product}>
-            {(productLoadingState === LoadingState.Loading || productLoadingState === LoadingState.Never) && <Loader/>}
+            {(productLoadingState === LoadingState.Loading || productLoadingState === LoadingState.Never) &&
+            <Loader/>}
             {productData === null && <div className={styles.error}><Error/></div>}
             {productData !== null && productLoadingState === LoadingState.Loaded && (
                 <div>

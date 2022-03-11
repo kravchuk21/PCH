@@ -90,12 +90,14 @@
     top: 10px;
     right: -100px;
 }
+
 .mainImage1 {
     right: 90px;
     height: 350px;
     z-index: 1;
     top: 125px;
 }
+
 .mainImage3 {
     right: -120px;
     z-index: 1;

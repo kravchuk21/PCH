@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 .loader-wrapper {
     position: fixed;
     width: 100%;
@@ -13,6 +14,7 @@
     background-color: #eee;
 
 }
+
 .loader-box {
     height: 300px;
     width: 100%;
@@ -21,6 +23,7 @@
     justify-content: center;
 
 }
+
 .icon {
     font-size: 5rem;
     transform: scale(1);
@@ -35,6 +38,7 @@
     color: #F7C355;
     box-shadow: 0 0 15px #fff;
 }
+
 @keyframes loaderSize {
     0% {
         transform: scale(1) rotate(0);

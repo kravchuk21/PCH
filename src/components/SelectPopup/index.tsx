@@ -44,15 +44,15 @@ const SelectPopup: React.FC<SelectPopupType> = React.memo(
                         <div className={styles.selectPopup}>
                             <ul>
                                 {items &&
-                                    items.map((item, index) => (
-                                        <li
-                                            onClick={() => onSelectItem(index)}
-                                            className={activeSelectItem.title === item.title ? styles.active : ""}
-                                            key={`${item.title}_${index}`}
-                                        >
-                                            {item.title}
-                                        </li>
-                                    ))}
+                                items.map((item, index) => (
+                                    <li
+                                        onClick={() => onSelectItem(index)}
+                                        className={activeSelectItem.title === item.title ? styles.active : ""}
+                                        key={`${item.title}_${index}`}
+                                    >
+                                        {item.title}
+                                    </li>
+                                ))}
                             </ul>
                         </div>
                     )}

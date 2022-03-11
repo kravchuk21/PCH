@@ -19,9 +19,10 @@
     margin-bottom: 15px;
 }
 
-.slideImg img{
+.slideImg img {
 
 }
+
 .slideInfo {
     display: flex;
     justify-content: space-between;
@@ -33,7 +34,7 @@
     color: #F7C355;
 }
 
-.price{
+.price {
     font-weight: 900;
     font-size: 18px;
     color: #323232;

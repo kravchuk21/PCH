@@ -44,7 +44,11 @@ export const cartSlice = createSlice({
                 state.totalPrice += action.payload.price
                 state.totalCount += 1
             } else {
-                state.items = [{...action.payload, totalPrice: action.payload.price, count: 1}, ...state.items]
+                state.items = [{
+                    ...action.payload,
+                    totalPrice: action.payload.price,
+                    count: 1
+                }, ...state.items]
                 state.totalPrice += action.payload.price
                 state.totalCount += 1
             }

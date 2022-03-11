@@ -9,7 +9,7 @@ const Vacancy: React.FC = () => {
         <div className={styles.vacancy}>
             <div className={styles.vacancyHeader}>
                 <div className={styles.vacancyHeaderButtons}>
-                   <ButtonBack mode={"white"}/>
+                    <ButtonBack mode={"white"}/>
                 </div>
                 <div className={styles.vacancyImage}>
                     <img style={{maxWidth: 360, width: "100%"}} src={PersonImg} alt=""/>
@@ -40,7 +40,8 @@ const Vacancy: React.FC = () => {
                 </h4>
                 <p className={styles.text}>
                     Мы ищем ответственных, коммуникабельных
-                    без вредных привычек с опытом работы или без, а также с пониманием специфики работы повара. Ждем вас
+                    без вредных привычек с опытом работы или без, а также с пониманием специфики
+                    работы повара. Ждем вас
                     ! ⠀
                 </p>
                 <p className={styles.text}>

@@ -35,7 +35,7 @@ const Menu: React.FC = () => {
         <div className={styles.menu}>
             <div className={styles.menuHeader}>
                 <ButtonBack text="Меню"/>
-               <CartIcon/>
+                <CartIcon/>
             </div>
             <div className={styles.category}>
                 {(categoryLoadingState === LoadingState.Error || categoryLoadingState === LoadingState.Never) && null}
@@ -59,7 +59,8 @@ const Menu: React.FC = () => {
                 <div className={styles.productCards}>
                     {productsLoadingState === LoadingState.Loading && (
                         Array(10).fill(0).map(_ => <div key={`${new Date()}${Math.random()}`}
-                                                        className={styles.productLoader}><MenuProductCardLoader/></div>)
+                                                        className={styles.productLoader}>
+                            <MenuProductCardLoader/></div>)
                     )}
                     {productsLoadingState === LoadingState.Loaded && (
                         products.map(product => (

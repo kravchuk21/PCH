@@ -1,11 +1,11 @@
 import React from 'react';
-import { useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import styles from "./ButtonBack.module.css"
 
 type ButtonBackType = {
     text?: string,
     path?: string,
-    mode? : "dark" | "white"
+    mode?: "dark" | "white"
 }
 const ButtonBack: React.FC<ButtonBackType> = ({text, path = "/", mode = "dark"}) => {
     const navigate = useNavigate()

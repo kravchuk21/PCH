@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
 }
+
 .cartIcon.active {
     background: #f5a452;
     border-radius: 100000px;
