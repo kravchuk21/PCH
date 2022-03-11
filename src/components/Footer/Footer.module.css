@@ -1,26 +1,26 @@
 .footer {
-    background: #323232;
+        background: #323232;
 }
 
 .footer img {
-    width: 50px;
+        width: 50px;
 }
 
 .footerContent {
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 10px 30px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 10px 30px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
 }
 
 .copyright {
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 29px;
-    color: #FFFFFF;
-    margin-left: 20px;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 29px;
+        color: #FFFFFF;
+        margin-left: 20px;
 }
 

@@ -1,50 +1,51 @@
 .cartHeader {
-    padding: 30px;
+        padding: 30px;
 }
 
 .totalPrice {
-    font-weight: 900;
-    font-size: 18px;
-    padding: 24px 0;
+        font-weight: 900;
+        font-size: 18px;
+        padding: 24px 0;
 }
 
 .totalPrice span {
-    color: #FBB347;
+        color: #FBB347;
 }
 
 .info {
-    color: #9C9C9C;
+        color: #9C9C9C;
 }
 
 .infoTitle {
-    font-weight: 900;
-    font-size: 18px;
-    margin-bottom: 8px;
+        font-weight: 900;
+        font-size: 18px;
+        margin-bottom: 8px;
 }
 
 .infoText {
-    font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 18px;
+        font-weight: bold;
+        font-size: 12px;
+        margin-bottom: 18px;
 }
 
 .title {
-    font-weight: 800;
-    font-size: 24px;
-    color: #323232;
-    margin: 20px 0;
+        font-weight: 800;
+        font-size: 24px;
+        color: #323232;
+        margin: 20px 0;
 }
 
 .content {
-    box-sizing: border-box;
-    max-width: 900px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 0 30px;
+        box-sizing: border-box;
+        max-width: 900px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 30px;
 }
+
 .messages {
-    display: block;
-    color: #FBB347;
-    text-align: center;
-    margin:20px 0;
+        display: block;
+        color: #FBB347;
+        text-align: center;
+        margin: 20px 0;
 }

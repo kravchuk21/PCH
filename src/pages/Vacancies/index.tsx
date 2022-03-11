@@ -12,55 +12,55 @@ import Person2Img from "../../assets/img/peros 2.png";
 
 
 const Vacancies: React.FC = () => {
-    return (
-        <div className={styles.vacancies}>
-            {isDesktop && (
-                <DesctopNavigation mode={"white"}/>
-            )}
-            {isMobile && (
-                <div className={styles.vacanciesHeader}>
-                    <ButtonBack text="Вакансии"/>
+        return (
+                <div className={styles.vacancies}>
+                        {isDesktop && (
+                                <DesctopNavigation mode={"white"}/>
+                        )}
+                        {isMobile && (
+                                <div className={styles.vacanciesHeader}>
+                                        <ButtonBack text="Вакансии"/>
+                                </div>
+                        )}
+                        <div className={styles.vacanciesItems}>
+                                <div className={styles.cartItem}>
+                                        <div className={styles.vacanciesImage}>
+                                                <img width={162} className={styles.circles} src={CirclesImg} alt=""/>
+                                                <img width="80%" src={PersonImg} alt=""/>
+                                        </div>
+                                        <div className={styles.vacanciesInfo}>
+                                                <h3 className={styles.vacanciesTitle}>Повар</h3>
+                                                <p className={styles.vacanciesInfoText}>
+                                                        Рестораны:
+                                                        г.Толочин
+                                                        г.Коханово
+                                                </p>
+                                                <Link to={"/vacancies/1"} className={styles.vacanciesButton}>
+                                                        Подробнее
+                                                </Link>
+                                        </div>
+                                </div>
+                                <div className={styles.cartItem}>
+                                        <div className={styles.vacanciesImage}>
+                                                <img width={162} className={styles.circles} src={CirclesImg} alt=""/>
+                                                <img width="80%" src={Person2Img} alt=""/>
+                                        </div>
+                                        <div className={styles.vacanciesInfo}>
+                                                <h3 className={styles.vacanciesTitle}>Повар</h3>
+                                                <p className={styles.vacanciesInfoText}>
+                                                        Рестораны:
+                                                        г.Толочин
+                                                        г.Коханово
+                                                </p>
+                                                <Link to={"/vacancies/1"} className={styles.vacanciesButton}>
+                                                        Подробнее
+                                                </Link>
+                                        </div>
+                                </div>
+                        </div>
                 </div>
-            )}
-            <div className={styles.vacanciesItems}>
-                <div className={styles.cartItem}>
-                    <div className={styles.vacanciesImage}>
-                        <img width={162} className={styles.circles} src={CirclesImg} alt=""/>
-                        <img width="80%" src={PersonImg} alt=""/>
-                    </div>
-                    <div className={styles.vacanciesInfo}>
-                        <h3 className={styles.vacanciesTitle}>Повар</h3>
-                        <p className={styles.vacanciesInfoText}>
-                            Рестораны:
-                            г.Толочин
-                            г.Коханово
-                        </p>
-                        <Link to={"/vacancies/1"} className={styles.vacanciesButton}>
-                            Подробнее
-                        </Link>
-                    </div>
-                </div>
-                <div className={styles.cartItem}>
-                    <div className={styles.vacanciesImage}>
-                        <img width={162} className={styles.circles} src={CirclesImg} alt=""/>
-                        <img width="80%" src={Person2Img} alt=""/>
-                    </div>
-                    <div className={styles.vacanciesInfo}>
-                        <h3 className={styles.vacanciesTitle}>Повар</h3>
-                        <p className={styles.vacanciesInfoText}>
-                            Рестораны:
-                            г.Толочин
-                            г.Коханово
-                        </p>
-                        <Link to={"/vacancies/1"} className={styles.vacanciesButton}>
-                            Подробнее
-                        </Link>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-    );
+        );
 };
 
 export default Vacancies;

@@ -1,66 +1,69 @@
 .vacancies {
-    padding: 30px;
+        padding: 30px;
 }
+
 .vacanciesItems {
-    max-width: 900px;
-    width: 100%;
-    margin: 30px auto 0 auto;
+        max-width: 900px;
+        width: 100%;
+        margin: 30px auto 0 auto;
 }
 
 .cartItem {
-    display: flex;
-    margin-bottom: 24px;
-    width: auto;
+        display: flex;
+        margin-bottom: 24px;
+        width: auto;
 }
 
 .vacanciesImage {
-    width: 170px;
-    height: 110px;
-    background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
-    box-shadow: 0px 5px 10px rgba(251, 157, 40, 0.5);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
+        width: 170px;
+        height: 110px;
+        background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%), linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%);
+        box-shadow: 0px 5px 10px rgba(251, 157, 40, 0.5);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative;
 }
-.vacanciesImage img{
-    z-index: 3;
+
+.vacanciesImage img {
+        z-index: 3;
 }
 
 .circles {
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    z-index: 1;
+        position: absolute;
+        top: -20px;
+        left: -20px;
+        z-index: 1;
 }
 
 .vacanciesInfo {
-    padding: 0 !important;
-    margin-left: 16px;
-    width: 110px;
+        padding: 0 !important;
+        margin-left: 16px;
+        width: 110px;
 }
+
 .vacanciesTitle {
-    font-weight: 900;
-    font-size: 14px;
-    margin-bottom: 10px;
+        font-weight: 900;
+        font-size: 14px;
+        margin-bottom: 10px;
 }
 
 .vacanciesInfoText {
-    margin-bottom: 10px;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 15px;
-    color: #323232;
+        margin-bottom: 10px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        color: #323232;
 }
 
 .vacanciesButton {
-    font-weight: 800;
-    font-size: 13px;
-    color: #FFFFFF;
-    background: #F7C355;
-    padding: 6px 14px;
-    border-radius: 7px;
-    text-decoration: none;
+        font-weight: 800;
+        font-size: 13px;
+        color: #FFFFFF;
+        background: #F7C355;
+        padding: 6px 14px;
+        border-radius: 7px;
+        text-decoration: none;
 }

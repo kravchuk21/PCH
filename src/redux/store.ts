@@ -8,15 +8,15 @@ import userSlice from './slices/userSlice';
 import cartSlice from './slices/cartSlice';
 
 export const store = configureStore({
-    reducer: {
-        products: productsSlice,
-        popular: popularProductsSlice,
-        category: categorySlice,
-        product: productSlice,
-        user: userSlice,
-        app: appSlice,
-        cart: cartSlice
-    },
+        reducer: {
+                products: productsSlice,
+                popular: popularProductsSlice,
+                category: categorySlice,
+                product: productSlice,
+                user: userSlice,
+                app: appSlice,
+                cart: cartSlice
+        },
 })
 
 export type RootState = ReturnType<typeof store.getState>

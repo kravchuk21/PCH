@@ -1,25 +1,25 @@
 .button {
-    background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%);
-    box-shadow: 0 4px 12px rgba(248, 196, 86, 0.6);
-    border-radius: 10px;
-    padding: 15px 30px;
-    display: block;
-    font-weight: 800;
-    font-size: 20px;
-    color: #FFFFFF;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    min-width: 260px;
+        background: linear-gradient(127.74deg, #F7C355 9.86%, #FD860E 100%);
+        box-shadow: 0 4px 12px rgba(248, 196, 86, 0.6);
+        border-radius: 10px;
+        padding: 15px 30px;
+        display: block;
+        font-weight: 800;
+        font-size: 20px;
+        color: #FFFFFF;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+        margin-bottom: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        min-width: 260px;
 }
 
 .button:disabled {
-    cursor: not-allowed;
-    background: #c6c4c4;
-    box-shadow: none;
+        cursor: not-allowed;
+        background: #c6c4c4;
+        box-shadow: none;
 }
 
